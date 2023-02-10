@@ -93,11 +93,26 @@ public class ExercisesActivity extends AppCompatActivity {
             //натискання кнопки вибрати
             case R.id.btSelect: {
                 Intent intent = new Intent();
-                intent.putExtra("exercise","test text chosen exercise");
+                String exercise = getChoosingExercise();
+                intent.putExtra("exercise","Chosen exercise " + exercise);
                 setResult(RESULT_OK,intent);
                 finish();
             } break;
         }
+    }
+
+    private String getChoosingExercise() {
+
+        Cursor cursor = dBexercises.getFullCursor();
+
+        if (    cursor.moveToFirst() & (list.size() != 0)   ) {
+            int pos = lv.getCheckedItemPosition();
+            if(pos == -1) return "null";
+            if(pos == list.size()) return "null";
+
+            return list.get(pos);
+
+        } else return null;
     }
 
     private void deletingChosenExercise() {

@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private ActivityResultLauncher resultLauncher = null;
-
     private Exercise selExercise = new Exercise();
 
     private Training training = new Training();
@@ -41,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                         String s = result.getData().getStringExtra("exercise");
                         Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
                         selExercise.setName(s);
+                        binding.tvExercise.setText(s);
                     }
                 }
         );
