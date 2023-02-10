@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="set_exercises">
+        <item>Barbell Squat</item>
+        <item>Romanian Deadlift</item>
+
+        <item>Dumbbell Chest Press</item>
+        <item>Chest Dips</item>
+
+        <item>Reverse-Grip Pull-Ups</item>
+        <item>Incline Bench Dumbbell Row</item>
+
+        <item>Standing Dumbbell Press</item>
+        <item>Cable Rope Rear Delt Face Pulls</item>
+
+        <item>Seated Calf Raises</item>
+        <item>Standing Calf Raise</item>
+    </string-array>
+
+</resources>
