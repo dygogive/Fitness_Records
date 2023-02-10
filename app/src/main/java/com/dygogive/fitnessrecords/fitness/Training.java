@@ -9,4 +9,10 @@ public class Training {
 
     private List<Set> sets = new ArrayList<>();
 
+    public void addSet(Set set) {
+        sets.add(set);
+    }
+
+
+
 }

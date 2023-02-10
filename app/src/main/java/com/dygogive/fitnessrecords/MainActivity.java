@@ -10,12 +10,18 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.dygogive.fitnessrecords.databinding.ActivityMainBinding;
+import com.dygogive.fitnessrecords.fitness.Exercise;
+import com.dygogive.fitnessrecords.fitness.Training;
 import com.dygogive.fitnessrecords.lists.ExercisesActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private ActivityResultLauncher resultLauncher = null;
+
+    private Exercise selExercise = new Exercise();
+
+    private Training training = new Training();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     if(result.getResultCode() == RESULT_OK) {
                         String s = result.getData().getStringExtra("exercise");
                         Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+                        selExercise.setName(s);
                     }
                 }
         );
