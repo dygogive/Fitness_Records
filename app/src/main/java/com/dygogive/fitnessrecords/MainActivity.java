@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.dygogive.fitnessrecords.databinding.ActivityMainBinding;
 import com.dygogive.fitnessrecords.lists.ExercisesActivity;
@@ -15,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private ActivityResultLauncher resultLauncher = null;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,12 @@ public class MainActivity extends AppCompatActivity {
         //launcher for open other activities
         resultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
-                result -> {}
+                result -> {
+                    if(result.getResultCode() == RESULT_OK) {
+                        String s = result.getData().getStringExtra("exercise");
+                        Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+                    }
+                }
         );
 
     }

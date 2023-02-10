@@ -2,6 +2,7 @@ package com.dygogive.fitnessrecords.lists;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -90,8 +91,12 @@ public class ExercisesActivity extends AppCompatActivity {
             case R.id.btDel: deletingChosenExercise();
                 break;
             //натискання кнопки вибрати
-            case R.id.btSelect:
-                break;
+            case R.id.btSelect: {
+                Intent intent = new Intent();
+                intent.putExtra("exercise","test text chosen exercise");
+                setResult(RESULT_OK,intent);
+                finish();
+            } break;
         }
     }
 
