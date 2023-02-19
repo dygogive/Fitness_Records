@@ -3,5 +3,5 @@
 
     <item
         android:id="@+id/menItem_newTrainPlan"
-        android:title="New Training Plan" />
+        android:title="New Training Pattern" />
 </menu>

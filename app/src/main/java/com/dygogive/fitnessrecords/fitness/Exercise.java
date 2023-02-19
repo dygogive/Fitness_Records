@@ -12,12 +12,17 @@ public class Exercise {
         return name;
     }
 
+
     public Exercise() {
     }
 
-    public Exercise(String name) {
-        this.name = name;
+    public Exercise(String pattern_name) {
+        name = pattern_name;
     }
+
+
+
+
 
 
 
