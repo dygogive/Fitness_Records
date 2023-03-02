@@ -8,12 +8,25 @@
 
     <Button
         android:id="@+id/btCreate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
         android:onClick="onClick"
         android:text="NewTraining"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="362dp"
+        android:layout_height="722dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCreate">
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
